@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-dark: #2B543A;
+  --color-brand-light: #BDE07C;
+  --color-brand-bg: #F9F9F9;
+  
+  --font-heading: var(--font-heading-family), "Plus Jakarta Sans", sans-serif;
+  --font-body: var(--font-body-family), "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles using standard CSS to avoid @apply resolution issues in v4 */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: var(--font-body-family), "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading-family), "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* Utilities */
+.font-heading {
+  font-family: var(--font-heading-family), "Plus Jakarta Sans", sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body-family), "Inter", sans-serif;
 }
