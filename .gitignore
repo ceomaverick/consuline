@@ -43,3 +43,10 @@ next-env.d.ts
 # project specific
 /ignore/
 /public/images/unused/
+
+# global repo config boundaries
+.env*.local
+/dist
+/.turbo
+/aiskills
+/design
